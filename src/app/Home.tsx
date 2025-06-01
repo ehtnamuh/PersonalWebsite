@@ -125,13 +125,13 @@ export default function Home() {
                             />
                             <div className="flex flex-row gap-4 mt-4">
                                 <a
-                                    href="https://github.com/your-github-username"
+                                    href="https://github.com/ehtnamuh?tab=repositories"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-white border-2 border-cyan-400 flex items-center justify-center shadow hover:bg-cyan-50 transition"
                                 >
                                     <Image
-                                        src="/github-mark.svg"
+                                        src="./logos/github-mark.png"
                                         alt="GitHub"
                                         width={24}
                                         height={24}
@@ -139,13 +139,13 @@ export default function Home() {
                                     />
                                 </a>
                                 <a
-                                    href="https://linkedin.com/in/your-linkedin-username"
+                                    href="https://www.linkedin.com/in/samin-bin-karim-/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-white border-2 border-cyan-400 flex items-center justify-center shadow hover:bg-cyan-50 transition"
                                 >
                                     <Image
-                                        src="/linkedin.svg"
+                                        src="./logos/linkedin.png"
                                         alt="LinkedIn"
                                         width={24}
                                         height={24}
@@ -153,13 +153,13 @@ export default function Home() {
                                     />
                                 </a>
                                 <a
-                                    href="https://medium.com/@your-medium-username"
+                                    href="https://medium.com/@saminbinkarim"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-white border-2 border-cyan-400 flex items-center justify-center shadow hover:bg-cyan-50 transition"
                                 >
                                     <Image
-                                        src="/medium.svg"
+                                        src="./logos/medium.jpeg"
                                         alt="Medium"
                                         width={24}
                                         height={24}
@@ -188,84 +188,92 @@ export default function Home() {
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">Education</h2>
                             </div>
                             <div className="w-full max-w-3xl flex flex-col gap-8">
-                                {/* Box 1 */}
-                                <div className="bg-cyan-400 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
+                                {/* IIT */}
+                                <div className="bg-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
                                     <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
                                         <Image
-                                            src="/iit_logo.png"
+                                            src="./logos/iit_logo.png"
                                             alt="Illinois Institute of Technology"
-                                            width={100}
-                                            height={100}
+                                            width={200}
+                                            height={150}
                                             className="rounded-lg object-contain bg-white p-2"
                                         />
                                     </div>
                                     <div className="flex flex-col items-start md:pl-8 w-full">
-                                        <h3 className="font-semibold text-lg text-white">
+                                        <h3 className="font-semibold text-lg text-black">
                                             Illinois Institute of Technology
-                                            <span className="block text-orange-300 font-normal">M.A.S. in Artificial Intelligence</span>
+                                            <span className="block text-orange-500 font-normal">M.A.S. in Artificial Intelligence</span>
                                         </h3>
-                                        <p className="text-white mt-1">
-                                            <span className="text-orange-100">GPA:</span> 4.00 <span className="ml-2 text-sm">(Aug 2023 – May 2025)</span>
+                                        <p className="text-black mt-1">
+                                            <span className="text-cyan-700">GPA:</span> 3.9 <span className="ml-2 text-sm">(Aug 2023 – May 2025)</span>
                                         </p>
                                         <div className="mt-2">
-                                            <span className="text-white font-semibold">Highlighted Courses:</span>
-                                            <ul className="list-disc ml-5 mt-1 text-white text-sm">
-                                                <li>Machine Learning</li>
-                                                <li>Deep Learning</li>
-                                                <li>Intelligent Systems</li>
-                                                <li>Computer Vision</li>
-                                            </ul>
+                                            <span className="text-black font-semibold">Highlighted Courses:</span>
+                                            <div className="flex flex-wrap gap-2 mt-2">
+                                                {["Machine Learning", "Deep Learning", "Intelligent Systems", "Computer Vision"].map(course => (
+                                                    <span
+                                                        key={course}
+                                                        className="bg-white text-gray-800 rounded-full px-3 py-1 text-sm font-medium shadow"
+                                                    >
+                                                        {course}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                {/* Box 2 */}
-                                <div className="bg-cyan-400 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
+                                {/* IUB */}
+                                <div className="bg-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
                                     <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
                                         <Image
-                                            src="/iub_logo.png"
+                                            src="./logos/iub_logo.jpg"
                                             alt="Independent University Bangladesh"
-                                            width={100}
-                                            height={100}
+                                            width={160}
+                                            height={160}
                                             className="rounded-lg object-contain bg-white p-2"
                                         />
                                     </div>
                                     <div className="flex flex-col items-start md:pl-8 w-full">
-                                        <h3 className="font-semibold text-lg text-white">
+                                        <h3 className="font-semibold text-lg text-black">
                                             Independent University Bangladesh
-                                            <span className="block text-orange-300 font-normal">B.Sc. in Computer Science and Engineering</span>
+                                            <span className="block text-orange-500 font-normal">B.Sc. in Computer Science and Engineering</span>
                                         </h3>
-                                        <p className="text-white mt-1">
-                                            <span className="text-orange-100">GPA:</span> 3.86 <span className="ml-2 text-sm">(May 2022)</span>
+                                        <p className="text-black mt-1">
+                                            <span className="text-cyan-700">GPA:</span> 3.86 <span className="ml-2 text-sm">(May 2022)</span>
                                         </p>
                                         <div className="mt-2">
-                                            <span className="text-white font-semibold">Highlighted Courses:</span>
-                                            <ul className="list-disc ml-5 mt-1 text-white text-sm">
-                                                <li>Control Systems</li>
-                                                <li>Embedded Systems</li>
-                                                <li>Machine Learning</li>
-                                                <li>Software Engineering</li>
-                                            </ul>
+                                            <span className="text-black font-semibold">Highlighted Courses:</span>
+                                            <div className="flex flex-wrap gap-2 mt-2">
+                                                {["Control Systems", "Embedded Systems", "Machine Learning", "Software Engineering"].map(course => (
+                                                    <span
+                                                        key={course}
+                                                        className="bg-white text-gray-800 rounded-full px-3 py-1 text-sm font-medium shadow"
+                                                    >
+                                                        {course}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                {/* Box 3 */}
-                                <div className="bg-cyan-400 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
+                                {/* CIE */}
+                                <div className="bg-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
                                     <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
                                         <Image
-                                            src="/cambridge_logo.png"
+                                            src="./logos/cie_logo.png"
                                             alt="Cambridge Assessment International Education"
-                                            width={100}
-                                            height={100}
+                                            width={150}
+                                            height={150}
                                             className="rounded-lg object-contain bg-white p-2"
                                         />
                                     </div>
                                     <div className="flex flex-col items-start md:pl-8 w-full">
-                                        <h3 className="font-semibold text-lg text-white">
+                                        <h3 className="font-semibold text-lg text-black">
                                             Cambridge Assessment International Education
-                                            <span className="block text-orange-300 font-normal">GCE A Level &amp; O Level</span>
+                                            <span className="block text-orange-500 font-normal">GCE A Level &amp; O Level</span>
                                         </h3>
-                                        <p className="text-white mt-1">
-                                            <span className="text-orange-100">Board:</span> Cambridge University Examination Board <span className="ml-2 text-sm">(O Level: 2014 – 2016, A Level: 2016 – 2018)</span>
+                                        <p className="text-black mt-1">
+                                            <span className="text-cyan-700">Board:</span> Cambridge University Examination Board <span className="ml-2 text-sm">(O Level: 2014 – 2016, A Level: 2016 – 2018)</span>
                                         </p>
                                     </div>
                                 </div>
