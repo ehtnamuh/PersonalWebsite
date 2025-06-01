@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 // const nextConfig = {output:"standalone"}
 const nextConfig = {
+  basePath: 'Samin-Bin-Karim/',
   output: "export",
   reactStrictMode: true,
-  basePath: 'Samin-Bin-Karim/',
   images: {
     unoptimized: true, 
   },
