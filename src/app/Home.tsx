@@ -194,7 +194,7 @@ export default function Home() {
                                         <Image
                                             src="./logos/iit_logo.png"
                                             alt="Illinois Institute of Technology"
-                                            width={200}
+                                            width={300}
                                             height={150}
                                             className="rounded-lg object-contain bg-white p-2"
                                         />
@@ -210,7 +210,7 @@ export default function Home() {
                                         <div className="mt-2">
                                             <span className="text-black font-semibold">Highlighted Courses:</span>
                                             <div className="flex flex-wrap gap-2 mt-2">
-                                                {["Machine Learning", "Deep Learning", "Intelligent Systems", "Computer Vision"].map(course => (
+                                                {["Robotics", "Machine Learning", "Deep Learning", "Advanced AI", "Trustworthy AI", "Data Driven Modeling"].map(course => (
                                                     <span
                                                         key={course}
                                                         className="bg-white text-gray-800 rounded-full px-3 py-1 text-sm font-medium shadow"
@@ -244,7 +244,7 @@ export default function Home() {
                                         <div className="mt-2">
                                             <span className="text-black font-semibold">Highlighted Courses:</span>
                                             <div className="flex flex-wrap gap-2 mt-2">
-                                                {["Control Systems", "Embedded Systems", "Machine Learning", "Software Engineering"].map(course => (
+                                                {["Numerical Methods", "Artificial Intelligence", "Machine Learning", "Software Engineering"].map(course => (
                                                     <span
                                                         key={course}
                                                         className="bg-white text-gray-800 rounded-full px-3 py-1 text-sm font-medium shadow"
@@ -257,6 +257,7 @@ export default function Home() {
                                     </div>
                                 </div>
                                 {/* CIE */}
+                                {/* Advanced Level */}
                                 <div className="bg-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
                                     <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
                                         <Image
@@ -269,11 +270,46 @@ export default function Home() {
                                     </div>
                                     <div className="flex flex-col items-start md:pl-8 w-full">
                                         <h3 className="font-semibold text-lg text-black">
-                                            Cambridge Assessment International Education
-                                            <span className="block text-orange-500 font-normal">GCE A Level &amp; O Level</span>
+                                            Oxford International School
+                                            <span className="block text-orange-500 font-normal">Advanced Level (A Level)</span>
                                         </h3>
                                         <p className="text-black mt-1">
-                                            <span className="text-cyan-700">Board:</span> Cambridge University Examination Board <span className="ml-2 text-sm">(O Level: 2014 – 2016, A Level: 2016 – 2018)</span>
+                                            <span className="text-cyan-700">Board:</span> Cambridge International Examinations
+                                            <span className="ml-2 text-sm">(2016 – 2018)</span>
+                                        </p>
+                                        <p className="text-black mt-1">
+                                            <span className="font-semibold">Group:</span> Computer Science, Mathematics, Physics, Chemistry
+                                        </p>
+                                        <p className="text-black mt-1">
+                                            <span className="font-semibold">Result:</span> A, A, A, A
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* Ordinary Level */}
+                                <div className="bg-gray-200 rounded-lg shadow p-6 flex flex-col md:flex-row items-center w-full">
+                                    <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
+                                        <Image
+                                            src="./logos/cie_logo.png"
+                                            alt="Cambridge Assessment International Education"
+                                            width={150}
+                                            height={150}
+                                            className="rounded-lg object-contain bg-white p-2"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col items-start md:pl-8 w-full">
+                                        <h3 className="font-semibold text-lg text-black">
+                                            Oxford International School
+                                            <span className="block text-orange-500 font-normal">Ordinary Level (O Level)</span>
+                                        </h3>
+                                        <p className="text-black mt-1">
+                                            <span className="text-cyan-700">Board:</span> Cambridge International Examinations
+                                            <span className="ml-2 text-sm">(2014 – 2016)</span>
+                                        </p>
+                                        <p className="text-black mt-1">
+                                            <span className="font-semibold">Group:</span> English Language, Bengali, Mathematics, Additional Mathematics, Environmental Management, Physics, Chemistry, Biology, Computer Studies, Bangladesh Studies
+                                        </p>
+                                        <p className="text-black mt-1">
+                                            <span className="font-semibold">Result:</span> A, A, A, A, A, A, A, A, A, A, A
                                         </p>
                                     </div>
                                 </div>
@@ -281,43 +317,60 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-
                 {/* Honors & Awards Section */}
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
-                        <div className="flex flex-col items-center space-y-8 w-full">
+                        <div className="flex flex-col items-center space-y-12 w-full">
                             <div className="space-y-2 text-center">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">
+                                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-cyan-700">
                                     Honors & <span className="text-orange-500">Awards</span>
                                 </h2>
                             </div>
-                            <div className="w-full max-w-3xl flex flex-col gap-8">
-                                {/* Grainger Computing Innovation Prize */}
-                                <AwardCard
-                                    imageSrc="/grainger_prize.jpg"
-                                    title="Grainger Computing Innovation Prize"
-                                    subtitle="2nd Runners Up (2023)"
-                                    shortDesc="Awarded for innovative computing solutions at Illinois Tech."
-                                    detailsTitle="Grainger Computing Innovation Prize 2023"
-                                    detailsDesc="The Grainger Computing Innovation Prize recognizes outstanding student teams for innovative solutions to real-world problems using computing. Our team secured 2nd Runners Up for developing an AI-powered platform for predictive maintenance in industrial systems, competing against top student projects from across the university."
-                                />
-                                {/* Argonne AI Innovation Award */}
-                                <AwardCard
-                                    imageSrc="/argonne_ai_award.jpg"
-                                    title="Argonne AI Innovation Award"
-                                    subtitle="2nd Place (2024-2025)"
-                                    shortDesc="Recognized for excellence in AI-driven research and innovation."
-                                    detailsTitle="Argonne AI Innovation Award 2024-2025"
-                                    detailsDesc="The Argonne AI Innovation Award is presented by Argonne National Laboratory to student teams demonstrating exceptional AI research. Our team achieved 2nd Place for our work on autonomous vehicle sensor fusion and real-time decision-making, competing with leading teams from Midwest universities."
-                                />
-                                {/* Other Honors */}
-                                <div className="bg-cyan-400 rounded-lg shadow p-6 flex flex-col items-center w-full">
-                                    <h3 className="font-semibold text-lg text-white">Other Honors & <span className="text-orange-300">Awards</span></h3>
-                                    <ul className="list-disc ml-5 mt-2 text-white text-sm text-left">
-                                        <li>Dean’s List (2019-2022)</li>
-                                        <li className="text-orange-100">IEEE Robotics Competition Winner (2021)</li>
-                                        <li>Undergraduate Research Grant Recipient</li>
-                                    </ul>
+                            <div className="w-full max-w-6xl flex flex-col items-center">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+                                    {/* Grainger Computing Innovation Prize */}
+                                    <div className="col-span-1 flex flex-col items-center bg-gray-200 rounded-2xl shadow-lg p-10 hover:bg-gray-300 transition cursor-pointer min-h-[420px]">
+                                        <Image
+                                            src="./grainger_prize.jpeg"
+                                            alt="Grainger Computing Innovation Prize"
+                                            width={450}
+                                            height={450}
+                                            className="rounded-xl object-contain bg-white p-4 mb-6"
+                                        />
+                                        <h3 className="font-semibold text-2xl text-black text-center">Grainger Computing Innovation Prize</h3>
+                                        <span className="text-cyan-700 text-lg text-center">2nd Runners Up (2023)</span>
+                                        <p className="text-black mt-4 text-base text-center">
+                                            Awarded for innovative computing solutions at Illinois Tech.
+                                        </p>
+                                    </div>
+                                    {/* Argonne AI Innovation Award */}
+                                    <div className="col-span-1 flex flex-col items-center bg-gray-200 rounded-2xl shadow-lg p-10 hover:bg-gray-300 transition cursor-pointer min-h-[420px]">
+                                        <Image
+                                            src="./argonne_ai_award.jpg"
+                                            alt="Argonne AI Innovation Award"
+                                            width={600}
+                                            height={600}
+                                            className="rounded-xl object-contain bg-white p-4 mb-6"
+                                        />
+                                        <h3 className="font-semibold text-2xl text-black text-center">Argonne AI Innovation Award</h3>
+                                        <span className="text-cyan-700 text-lg text-center">2nd Place (2024-2025)</span>
+                                        <p className="text-black mt-4 text-base text-center">
+                                            Recognized for excellence in AI-driven research and innovation.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 mt-12 w-full">
+                                    {/* Other Honors */}
+                                    <div className="flex justify-center">
+                                        <div className="bg-gray-200 rounded-2xl shadow-lg p-10 flex flex-col items-center w-full md:w-2/3 lg:w-1/2">
+                                            <h3 className="font-semibold text-2xl text-black">Other Honors & <span className="text-orange-500">Awards</span></h3>
+                                            <ul className="list-disc ml-7 mt-4 text-black text-base text-left">
+                                                <li>Dean’s List (2019-2022)</li>
+                                                <li className="text-cyan-700">IEEE Robotics Competition Winner (2021)</li>
+                                                <li>Undergraduate Research Grant Recipient</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
