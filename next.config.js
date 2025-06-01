@@ -3,8 +3,9 @@
 const nextConfig = {
   output: "export",
   reactStrictMode: true,
+  basePath: 'Samin-Bin-Karim/',
   images: {
-    unoptimized: true, // <-- Add this line
+    unoptimized: true, 
   },
 };
 
