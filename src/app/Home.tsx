@@ -318,6 +318,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Honors & Awards Section */}
+                {/* TODO: Add links to the projects that won you the award and the competition pages */}
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="flex flex-col items-center space-y-12 w-full">
@@ -378,28 +379,182 @@ export default function Home() {
                 </section>
                 
                 {/* Experience Section */}
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-cyan-400 flex flex-col items-center justify-center">
+                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="space-y-6 text-center mb-8">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">Experience</h2>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">Experience</h2>
                         </div>
-                        <div className="max-w-3xl mx-auto space-y-8 flex flex-col items-center">
-                            <div className="bg-gray-50 rounded-lg shadow p-6 text-left w-full flex flex-col items-center">
-                                <h3 className="font-semibold text-lg text-cyan-700 text-center">Controls Engineer</h3>
-                                <p className="text-gray-700 text-center">ABC Automation Inc. | 2022 - Present</p>
-                                <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
-                                    <li>Designed and implemented advanced control algorithms for industrial automation.</li>
-                                    <li>Integrated PLCs, HMIs, and SCADA systems for manufacturing lines.</li>
-                                    <li><span className="text-orange-500">Collaborated</span> with cross-functional teams to deliver robust automation solutions.</li>
-                                </ul>
+                        <div className="relative max-w-3xl mx-auto flex flex-col items-center">
+                            {/* Timeline vertical line */}
+                            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-cyan-400 z-0" />
+                            <div className="space-y-16 w-full z-10">
+                                {/* EcoCAR EV Challenge Team */}
+                                <div className="flex flex-col md:flex-row items-center w-full relative">
+                                    <div className="md:w-1/4 flex justify-center md:justify-end mb-4 md:mb-0 md:pr-8">
+                                        <Image
+                                            src="/logos/iit_logo.png"
+                                            alt="Illinois Tech"
+                                            width={80}
+                                            height={80}
+                                            className="rounded-xl object-contain bg-white p-2 border-2 border-cyan-400 shadow"
+                                        />
+                                    </div>
+                                    <div className="md:w-3/4 bg-white rounded-lg shadow p-6 text-left flex flex-col items-center md:items-start border-l-4 border-cyan-400">
+                                        <h3 className="font-semibold text-lg text-cyan-700 text-center md:text-left">Technical Specialist & CAV Co-Lead</h3>
+                                        <p className="text-gray-700 text-center md:text-left">EcoCAR EV Challenge Team, Illinois Institute of Technology | Sept 2023 – Present</p>
+                                        <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
+                                            <li>Led development of torque pathway, regenerative braking, and lateral controllers (Stanley, MPC, PID) for advanced vehicle automation.</li>
+                                            <li>Developed Autopark using 2D grid occupancy maps from simulated ultrasonic sensors.</li>
+                                            <li>Integrated Magna Motor, PCM controller, and IMD into powermoding system; tested in HIL/VIL using Speedgoat.</li>
+                                            <li>Designed and tested stateflows for vehicle startup/shutdown, and created custom DBC files for controller communication.</li>
+                                            <li>Developed sensor fusion, Adaptive Cruise Control (ACC), and Lane Centering Control (LCC) in C++/Simulink; performed MIL/SIL testing and requirements analysis.</li>
+                                            <li>Built data visualization and automation pipelines in MATLAB for CAN/ASC/BLF data analysis and test case generation.</li>
+                                            <li>Collaborated on RoarRunner integration and troubleshooting with ACDelco, MDI Tool, and Bender IMD.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {/* H2.0 Resilience */}
+                                <div className="flex flex-col md:flex-row-reverse items-center w-full relative">
+                                    <div className="md:w-1/4 flex justify-center md:justify-start mb-4 md:mb-0 md:pl-8">
+                                        <Image
+                                            src="/logos/h2o_logo.png"
+                                            alt="H2.0 Resilience"
+                                            width={80}
+                                            height={80}
+                                            className="rounded-xl object-contain bg-white p-2 border-2 border-cyan-400 shadow"
+                                            onError={(e) => { (e.target as HTMLImageElement).src = "/logos/iit_logo.png" }}
+                                        />
+                                    </div>
+                                    <div className="md:w-3/4 bg-white rounded-lg shadow p-6 text-left flex flex-col items-center md:items-start border-r-4 md:border-l-0 border-cyan-400">
+                                        <h3 className="font-semibold text-lg text-cyan-700 text-center md:text-left">Lead Developer, H2.0 Resilience – AI-based Urban Flood Mitigation</h3>
+                                        <p className="text-gray-700 text-center md:text-left">IIT Startup Accelerator, Chicago, IL | Jan 2024 – Present</p>
+                                        <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
+                                            <li>Designed interpretable Vision Transformer-based models for flood prediction using real-time data.</li>
+                                            <li>Partnered with MWRD and Floodflash to deliver AI-driven solutions for city planning and disaster management.</li>
+                                            <li>Awarded 3rd place in Grainger Computing Innovation Prize 2023.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {/* Research Assistant */}
+                                <div className="flex flex-col md:flex-row items-center w-full relative">
+                                    <div className="md:w-1/4 flex justify-center md:justify-end mb-4 md:mb-0 md:pr-8">
+                                        <Image
+                                            src="/logos/iub_logo.jpg"
+                                            alt="IUB"
+                                            width={80}
+                                            height={80}
+                                            className="rounded-xl object-contain bg-white p-2 border-2 border-cyan-400 shadow"
+                                        />
+                                    </div>
+                                    <div className="md:w-3/4 bg-white rounded-lg shadow p-6 text-left flex flex-col items-center md:items-start border-l-4 border-cyan-400">
+                                        <h3 className="font-semibold text-lg text-cyan-700 text-center md:text-left">Full Time Research Assistant</h3>
+                                        <p className="text-gray-700 text-center md:text-left">Independent University Bangladesh | Feb 2022 – Jun 2023</p>
+                                        <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
+                                            <li>Finalized and submitted research on Shologuti Reinforcement Environment (Unity); built traffic simulations in C++/Lua.</li>
+                                            <li>Tested and modified traffic simulation environments (SUMO, SMARTS, CARLA, Highway-Env).</li>
+                                            <li>Trained RL agents for intersection/highway scenarios; generated synthetic data for particle clustering using Ginko and Pythia.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {/* Teaching Assistant */}
+                                <div className="flex flex-col md:flex-row-reverse items-center w-full relative">
+                                    <div className="md:w-1/4 flex justify-center md:justify-start mb-4 md:mb-0 md:pl-8">
+                                        <Image
+                                            src="/logos/iub_logo.jpg"
+                                            alt="IUB"
+                                            width={80}
+                                            height={80}
+                                            className="rounded-xl object-contain bg-white p-2 border-2 border-cyan-400 shadow"
+                                        />
+                                    </div>
+                                    <div className="md:w-3/4 bg-white rounded-lg shadow p-6 text-left flex flex-col items-center md:items-start border-r-4 md:border-l-0 border-cyan-400">
+                                        <h3 className="font-semibold text-lg text-cyan-700 text-center md:text-left">Teaching Assistant</h3>
+                                        <p className="text-gray-700 text-center md:text-left">Independent University Bangladesh | Feb 2022 – Dec 2022</p>
+                                        <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
+                                            <li>Assisted with Numerical Methods course; conducted lab classes in Python, NumPy, and matplotlib.</li>
+                                            <li>Created and graded programming assignments and worksheets.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {/* Undergraduate Teaching Assistant */}
+                                <div className="flex flex-col md:flex-row items-center w-full relative">
+                                    <div className="md:w-1/4 flex justify-center md:justify-end mb-4 md:mb-0 md:pr-8">
+                                        <Image
+                                            src="/logos/iub_logo.jpg"
+                                            alt="IUB"
+                                            width={80}
+                                            height={80}
+                                            className="rounded-xl object-contain bg-white p-2 border-2 border-cyan-400 shadow"
+                                        />
+                                    </div>
+                                    <div className="md:w-3/4 bg-white rounded-lg shadow p-6 text-left flex flex-col items-center md:items-start border-l-4 border-cyan-400">
+                                        <h3 className="font-semibold text-lg text-cyan-700 text-center md:text-left">Undergraduate Teaching Assistant</h3>
+                                        <p className="text-gray-700 text-center md:text-left">Independent University Bangladesh | May 2018 – Dec 2019</p>
+                                        <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
+                                            <li>Conducted lab programming classes in C++ for Algorithms course; assisted students with complex topics.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="bg-gray-50 rounded-lg shadow p-6 text-left w-full flex flex-col items-center">
-                                <h3 className="font-semibold text-lg text-cyan-700 text-center">Machine Learning Engineer (Intern)</h3>
-                                <p className="text-gray-700 text-center">Tech Innovations Lab | Summer 2021</p>
-                                <ul className="list-disc ml-5 mt-2 text-black text-sm text-left">
-                                    <li>Developed predictive models for equipment health monitoring.</li>
-                                    <li>Worked with time-series sensor data and deployed models to cloud platforms.</li>
-                                </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                {/* Volunteering Section */}
+                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
+                    <div className="container px-4 md:px-6 flex flex-col items-center">
+                        <div className="space-y-6 text-center mb-8">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">
+                                Research & <span className="text-orange-500">Volunteering</span>
+                            </h2>
+                            <p className="max-w-[700px] mx-auto md:text-xl text-gray-700">
+                                Contributing to the community and advancing research in AI, security, and healthcare.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-4xl">
+                            {/* Research Assistant - Wang Research Group */}
+                            <div className="flex flex-col md:flex-row items-center bg-gray-200 rounded-2xl shadow-lg p-8 hover:bg-gray-300 transition min-h-[260px]">
+                                <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
+                                    <Image
+                                        src="/logos/iit_logo.png"
+                                        alt="Wang Research Group, IIT"
+                                        width={100}
+                                        height={100}
+                                        className="rounded-lg object-contain bg-white p-2"
+                                    />
+                                </div>
+                                <div className="flex flex-col items-start md:pl-8 w-full">
+                                    <h3 className="font-semibold text-lg text-black">
+                                        Research Assistant
+                                    </h3>
+                                    <span className="text-cyan-700">Wang Research Group, Illinois Institute of Technology | May 2024 – Present</span>
+                                    <ul className="list-disc ml-5 mt-2 text-black text-sm">
+                                        <li>Investigated security vulnerabilities in Generative AI-powered drug discovery solutions.</li>
+                                        <li>Researched possible attacks on generative models and implemented defense mechanisms.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {/* Machine Learning Specialist - Bader Lab */}
+                            <div className="flex flex-col md:flex-row items-center bg-gray-200 rounded-2xl shadow-lg p-8 hover:bg-gray-300 transition min-h-[260px]">
+                                <div className="flex-shrink-0 flex justify-center items-center w-full md:w-1/3 mb-4 md:mb-0">
+                                    <Image
+                                        src="/logos/uchicago_logo.png"
+                                        alt="Bader Lab, University of Chicago"
+                                        width={100}
+                                        height={100}
+                                        className="rounded-lg object-contain bg-white p-2"
+                                    />
+                                </div>
+                                <div className="flex flex-col items-start md:pl-8 w-full">
+                                    <h3 className="font-semibold text-lg text-black">
+                                        Machine Learning Specialist
+                                    </h3>
+                                    <span className="text-cyan-700">Bader Lab, University of Chicago | Sept 2023 – Present</span>
+                                    <ul className="list-disc ml-5 mt-2 text-black text-sm">
+                                        <li>Implemented and compared medical image segmentation models for renal cell carcinoma treatment.</li>
+                                        <li>Developing novel transformer-based models with temporal awareness for improved medical imaging analysis.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -415,46 +570,172 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-                            {/* Project 1 */}
+                            {/* Histotripsy Segmentation for Bader Lab, University of Chicago */}
                             <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
                                 <Image
-                                    src="/project1.jpg"
-                                    alt="Autonomous Drone Navigation"
+                                    src="/project_histotripsy.jpg"
+                                    alt="Histotripsy Segmentation"
                                     width={400}
                                     height={400}
                                     className="object-cover w-full h-56"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
-                                    <h3 className="text-lg font-semibold text-orange-400">Autonomous Drone Navigation</h3>
-                                    <p className="text-sm text-white">Developed ML-based path planning and control for drones in dynamic environments.</p>
+                                    <h3 className="text-lg font-semibold text-orange-400">Histotripsy Segmentation</h3>
+                                    <p className="text-sm text-white">Developed transformer-based models for medical image segmentation in renal cell carcinoma treatment.</p>
                                 </div>
                             </div>
-                            {/* Project 2 */}
+                            {/* Adaptive Cruise Control in C++ with Python Test Automation */}
                             <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
                                 <Image
-                                    src="/project2.jpg"
-                                    alt="Industrial Process Automation"
+                                    src="/project_acc_cpp.jpg"
+                                    alt="Adaptive Cruise Control"
                                     width={400}
                                     height={400}
                                     className="object-cover w-full h-56"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
-                                    <h3 className="text-lg font-semibold text-orange-400">Industrial Process Automation</h3>
-                                    <p className="text-sm text-white">Designed PLC and SCADA systems for real-time process monitoring and control.</p>
+                                    <h3 className="text-lg font-semibold text-orange-400">Adaptive Cruise Control (C++)</h3>
+                                    <p className="text-sm text-white">Implemented ACC in C++ with Python-based test automation and MIL/SIL pipelines.</p>
                                 </div>
                             </div>
-                            {/* Project 3 */}
+                            {/* CAN Data Processing Libraries in Python */}
                             <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
                                 <Image
-                                    src="/project3.jpg"
-                                    alt="Predictive Maintenance Platform"
+                                    src="/project_can.jpg"
+                                    alt="CAN Data Processing"
                                     width={400}
                                     height={400}
                                     className="object-cover w-full h-56"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
-                                    <h3 className="text-lg font-semibold text-orange-400">Predictive Maintenance Platform</h3>
-                                    <p className="text-sm text-white">Built a web app using ML to predict equipment failures and optimize maintenance schedules.</p>
+                                    <h3 className="text-lg font-semibold text-orange-400">CAN Data Processing Libraries</h3>
+                                    <p className="text-sm text-white">Built Python libraries for parsing, analyzing, and visualizing CAN/ASC/BLF vehicle data.</p>
+                                </div>
+                            </div>
+                            {/* Modeling Vehicle ECUs using Python and Matlab */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_ecu.jpg"
+                                    alt="Vehicle ECU Modeling"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Vehicle ECU Modeling</h3>
+                                    <p className="text-sm text-white">Modeled automotive ECUs and communication using Python and MATLAB/Simulink.</p>
+                                </div>
+                            </div>
+                            {/* RL-based Adaptive Cruise Control */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_rl_acc.jpg"
+                                    alt="RL-based Adaptive Cruise Control"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">RL-based Adaptive Cruise Control</h3>
+                                    <p className="text-sm text-white">Designed RL agents for ACC that learn and adapt to human driving preferences.</p>
+                                </div>
+                            </div>
+                            {/* Lane Centering Controller using Stanley in C++ */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_lane_stanley.jpg"
+                                    alt="Lane Centering Controller"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Lane Centering Controller (Stanley, C++)</h3>
+                                    <p className="text-sm text-white">Implemented Stanley controller in C++ with Python-based test automation for lane centering.</p>
+                                </div>
+                            </div>
+                            {/* Shologuti Game with RL-trained AI */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_shologuti.jpg"
+                                    alt="Shologuti Game RL"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Shologuti Game AI</h3>
+                                    <p className="text-sm text-white">Developed a Shologuti board game with AI agents trained using reinforcement learning.</p>
+                                </div>
+                            </div>
+                            {/* Robot Arm Manipulation */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_robot_arm.jpg"
+                                    alt="Robot Arm Manipulation"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Robot Arm Manipulation</h3>
+                                    <p className="text-sm text-white">Programmed and simulated robot arm kinematics and control for pick-and-place tasks.</p>
+                                </div>
+                            </div>
+                            {/* Test Automation using MATLAB Scripting */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_matlab_test.jpg"
+                                    alt="MATLAB Test Automation"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Test Automation (MATLAB)</h3>
+                                    <p className="text-sm text-white">Automated test case generation and data analysis for automotive controllers using MATLAB scripting.</p>
+                                </div>
+                            </div>
+                            {/* Sensor Fusion Demo in Python and C++ */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_sensor_fusion.jpg"
+                                    alt="Sensor Fusion Demo"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Sensor Fusion Demo</h3>
+                                    <p className="text-sm text-white">Demonstrated sensor fusion algorithms in Python and C++ for autonomous vehicles.</p>
+                                </div>
+                            </div>
+                            {/* Lua-based Vehicle Simulation */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_lua_sim.jpg"
+                                    alt="Lua Vehicle Simulation"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Lua-based Vehicle Simulation</h3>
+                                    <p className="text-sm text-white">Built and extended vehicle simulation environments using Lua scripting.</p>
+                                </div>
+                            </div>
+                            {/* Intersection Control Simulation */}
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg bg-cyan-400 flex flex-col items-center">
+                                <Image
+                                    src="/project_intersection.jpg"
+                                    alt="Intersection Control Simulation"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-56"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                                    <h3 className="text-lg font-semibold text-orange-400">Intersection Control Simulation</h3>
+                                    <p className="text-sm text-white">Simulated and analyzed intersection control strategies for autonomous vehicles.</p>
                                 </div>
                             </div>
                         </div>
