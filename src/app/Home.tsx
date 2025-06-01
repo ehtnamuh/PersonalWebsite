@@ -18,7 +18,7 @@ export default function Home() {
                 <section className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48 flex flex-col items-center justify-center relative bg-black text-white overflow-hidden">
                     <div className="absolute inset-0 z-0 w-full h-full">
                         <Image
-                            src="/homeBackground.jpg"
+                            src="./homeBackground.jpg"
                             alt="Background Image"
                             fill
                             className="object-cover w-full h-full"
@@ -28,7 +28,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col items-center justify-center mt-8 mb-4 z-10 relative">
                         <Image
-                            src="/samin.jpg"
+                            src="./samin.jpg"
                             alt="Profile Picture"
                             width={150}
                             height={150}
