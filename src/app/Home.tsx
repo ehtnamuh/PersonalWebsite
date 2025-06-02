@@ -83,7 +83,7 @@ export default function Home() {
         <div className="flex flex-col min-h-screen bg-gray-50 text-black">
             <main className="flex-1 flex flex-col w-full items-center">
                 {/* Hero Section */}
-                <section className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48 flex flex-col items-center justify-center relative bg-black text-white overflow-hidden">
+                <section className="w-full py-10 sm:py-20 md:py-32 lg:py-48 xl:py-64 flex flex-col items-center justify-center relative bg-black text-white overflow-hidden">
                     <div className="absolute inset-0 z-0 w-full h-full">
                         <Image
                             src="./homeBackground.jpg"
@@ -94,25 +94,37 @@ export default function Home() {
                         />
                         <div className="absolute inset-0 bg-black/80" />
                     </div>
-                    <div className="flex flex-col items-center justify-center mt-8 mb-4 z-10 relative">
+                    <div className="flex flex-col items-center justify-center mt-12 mb-6 z-10 relative">
                         <Image
                             src="./samin.jpg"
                             alt="Profile Picture"
-                            width={150}
-                            height={150}
+                            width={240}
+                            height={240}
                             className="rounded-full object-cover border-4 border-cyan-400 shadow-lg"
                             priority
                         />
-                        <span className="mt-4 text-xl font-semibold text-white">
-                            <span className="text-orange-400">Samin Bin Karim</span>
+                        <span className="mt-6 text-5xl sm:text-6xl font-extrabold text-white">
+                            <span className="text-white-400">Samin Bin Karim</span>
                         </span>
-                        <span className="text-cyan-100">
-                            <span className="text-cyan-300 font-semibold">Controls Engineer</span> | <span className="text-orange-400">Machine Learning Engineer</span> | Software Engineer 
+                        <span className="text-cyan-100 text-lg sm:text-2xl mt-2 italic text-white">
+                            <span className="text-cyan-300 font-semibold">Controls Engineer</span> - <span className="text-orange-400">Machine Learning Engineer</span> - Software Engineer 
                         </span>
+                        <button
+                            type="button"
+                            className="mt-16 w-64 h-20 flex items-center justify-center rounded-lg bg-white text-black font-bold text-2xl shadow-lg hover:bg-gray-200 transition focus:outline-none focus:ring-4 focus:ring-cyan-300"
+                            onClick={() => {
+                                const aboutSection = document.getElementById("about");
+                                if (aboutSection) {
+                                    aboutSection.scrollIntoView({ behavior: "smooth" });
+                                }
+                            }}
+                        >
+                            Enter Portfolio
+                        </button>
                     </div>
                 </section>
                 {/* About Me Section */}
-                <section className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center bg-gray-100">
+                <section id="about" className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center bg-gray-100">
                     <div className="container flex flex-col md:flex-row items-center gap-8 px-4 md:px-6 justify-center max-w-4xl">
                         <div className="flex-shrink-0 flex flex-col items-center w-full md:w-auto">
                             <Image
@@ -170,7 +182,7 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col items-start w-full md:pl-8">
                             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-black mb-4">
-                                About <span className="text-orange-400">Me</span>
+                                About <span className="text-orange-400">Samin</span>
                             </h1>
                             <p className="max-w-[600px] md:text-xl text-black">
                                 <span className="text-cyan-700 font-semibold">Technical Specialist and CAV Co-Lead at EcoCAR EV Challenge Team, Illinois Tech</span> with a passion for intelligent vehicle systems, automation, and AI-driven solutions.
@@ -181,7 +193,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Education Section */}
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
+                <section id="education" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="flex flex-col items-center space-y-8 w-full">
                             <div className="space-y-2 text-center">
@@ -379,7 +391,7 @@ export default function Home() {
                 </section>
                 
                 {/* Experience Section */}
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 flex flex-col items-center justify-center">
+                <section id="experience" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="space-y-6 text-center mb-8">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">Experience</h2>
@@ -392,7 +404,7 @@ export default function Home() {
                                 <div className="flex flex-col md:flex-row items-center w-full relative">
                                     <div className="md:w-1/4 flex justify-center md:justify-end mb-4 md:mb-0 md:pr-8">
                                         <Image
-                                            src="/logos/iit_logo.png"
+                                            src="./logos/iit_logo.png"
                                             alt="Illinois Tech"
                                             width={80}
                                             height={80}
@@ -417,7 +429,7 @@ export default function Home() {
                                 <div className="flex flex-col md:flex-row-reverse items-center w-full relative">
                                     <div className="md:w-1/4 flex justify-center md:justify-start mb-4 md:mb-0 md:pl-8">
                                         <Image
-                                            src="/logos/h2o_logo.png"
+                                            src="./logos/h2o_logo.png"
                                             alt="H2.0 Resilience"
                                             width={80}
                                             height={80}
@@ -439,7 +451,7 @@ export default function Home() {
                                 <div className="flex flex-col md:flex-row items-center w-full relative">
                                     <div className="md:w-1/4 flex justify-center md:justify-end mb-4 md:mb-0 md:pr-8">
                                         <Image
-                                            src="/logos/iub_logo.jpg"
+                                            src="./logos/iub_logo.jpg"
                                             alt="IUB"
                                             width={80}
                                             height={80}
@@ -460,7 +472,7 @@ export default function Home() {
                                 <div className="flex flex-col md:flex-row-reverse items-center w-full relative">
                                     <div className="md:w-1/4 flex justify-center md:justify-start mb-4 md:mb-0 md:pl-8">
                                         <Image
-                                            src="/logos/iub_logo.jpg"
+                                            src="./logos/iub_logo.jpg"
                                             alt="IUB"
                                             width={80}
                                             height={80}
@@ -480,7 +492,7 @@ export default function Home() {
                                 <div className="flex flex-col md:flex-row items-center w-full relative">
                                     <div className="md:w-1/4 flex justify-center md:justify-end mb-4 md:mb-0 md:pr-8">
                                         <Image
-                                            src="/logos/iub_logo.jpg"
+                                            src="./logos/iub_logo.jpg"
                                             alt="IUB"
                                             width={80}
                                             height={80}
@@ -501,7 +513,7 @@ export default function Home() {
                 </section>
                 
                 {/* Volunteering Section */}
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
+                <section id="awards" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="space-y-6 text-center mb-8">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">
@@ -561,7 +573,7 @@ export default function Home() {
                 </section>
 
                 {/* Project Showcase Section */}
-                <section className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center bg-gray-50">
+                <section id="projects" className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center bg-gray-50">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="space-y-6 text-center mb-8">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">Project <span className="text-orange-500">Showcase</span></h2>
