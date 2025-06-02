@@ -1,5 +1,5 @@
 
-import Contact from "./components/Contact";
+import Contact from "./components/MyFooter";
 import Home from "./Home";
 import Image from "next/image";
 

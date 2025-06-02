@@ -26,13 +26,15 @@ function NavbarLinks({ onClick }: NavbarLinksProps) {
             <Link className="text-gray-300 hover:text-white uppercase" href="#awards" onClick={onClick}>
                 AWARDS
             </Link>
+            <Link className="text-gray-300 hover:text-white uppercase" href="#contact" onClick={onClick}>
+                CONTACT
+            </Link>
             <Link
                 className="text-gray-300 hover:text-white flex items-center gap-1 font-bold uppercase"
-                href="/resume.pdf"
+                href="./pdfs/samincv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
-                aria-label="Download Resume PDF"
+                aria-label="Open Resume PDF in new tab"
                 onClick={onClick}
             >
                 <img

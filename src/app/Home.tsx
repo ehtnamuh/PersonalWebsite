@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import Contact from "./components/Contact"
+import MyFooter from "./components/MyFooter"
 import { useState } from "react";
 import Image from "next/image";
 
@@ -70,13 +70,7 @@ function AwardCard({
     );
 }
 
-function Footer() {
-    return (
-    <footer className="bg-cyan-900 text-white px-6 py-4 border-t border-gray-200">
-      <Contact />
-    </footer>
-    )
-}
+
 
 export default function Home() {
     return (
@@ -429,12 +423,11 @@ export default function Home() {
                                 <div className="flex flex-col md:flex-row-reverse items-center w-full relative">
                                     <div className="md:w-1/4 flex justify-center md:justify-start mb-4 md:mb-0 md:pl-8">
                                         <Image
-                                            src="./logos/h2o_logo.png"
+                                            src="./logos/iit_logo.png"
                                             alt="H2.0 Resilience"
                                             width={80}
                                             height={80}
                                             className="rounded-xl object-contain bg-white p-2 border-2 border-cyan-400 shadow"
-                                            onError={(e) => { (e.target as HTMLImageElement).src = "/logos/iit_logo.png" }}
                                         />
                                     </div>
                                     <div className="md:w-3/4 bg-white rounded-lg shadow p-6 text-left flex flex-col items-center md:items-start border-r-4 md:border-l-0 border-cyan-400">
@@ -753,8 +746,87 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
+                {/* Contact Me Section */}
+                <section
+                    id="contact"
+                    className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center relative text-white"
+                >
+                    <div className="absolute inset-0 z-0 w-full h-full">
+                        <Image
+                            src="./homeBackground.jpg"
+                            alt="Contact Background"
+                            fill
+                            className="object-cover w-full h-full"
+                            style={{ opacity: 0.7 }}
+                        />
+                        <div className="absolute inset-0 bg-black/80" />
+                    </div>
+                    <div className="relative z-10 w-full max-w-xl px-4 flex flex-col items-center">
+                        <h2 className="text-4xl font-bold mb-4 text-cyan-300">Contact Me</h2>
+                        <p className="mb-8 text-lg text-cyan-100 text-center">
+                            Feel free to reach out via email or phone, or send a message using the form below.
+                        </p>
+                        <div className="mb-8 w-full flex flex-col items-center gap-2">
+                            <div>
+                                <span className="font-semibold text-orange-400">Primary:</span>{" "}
+                                <a href="mailto:saminbinkarim@gmail.com" className="underline hover:text-orange-300">
+                                    saminbinkarim@gmail.com
+                                </a>
+                            </div>
+                            <div>
+                                <span className="font-semibold text-orange-400">Academic:</span>{" "}
+                                <a href="mailto:skarim7@hawk.iit.edu" className="underline hover:text-orange-300">
+                                    skarim7@hawk.iit.edu
+                                </a>
+                            </div>
+                            <div>
+                                <span className="font-semibold text-orange-400">Phone:</span>{" "}
+                                <a href="tel:+13123584806" className="underline hover:text-orange-300">
+                                    +1 (312) 358-4806
+                                </a>
+                            </div>
+                        </div>
+                        <form className="w-full bg-white/90 rounded-lg shadow-lg p-8 flex flex-col gap-4 text-black">
+                            <label className="font-semibold">
+                                Name
+                                <input
+                                    type="text"
+                                    name="name"
+                                    className="mt-1 w-full rounded border border-cyan-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                                    placeholder="Your Name"
+                                />
+                            </label>
+                            <label className="font-semibold">
+                                Email
+                                <input
+                                    type="email"
+                                    name="email"
+                                    className="mt-1 w-full rounded border border-cyan-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                                    placeholder="you@email.com"
+                                />
+                            </label>
+                            <label className="font-semibold">
+                                Message
+                                <textarea
+                                    name="message"
+                                    rows={4}
+                                    className="mt-1 w-full rounded border border-cyan-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                                    placeholder="Your message..."
+                                />
+                            </label>
+                            <button
+                                type="submit"
+                                className="mt-2 w-full rounded-lg bg-cyan-600 text-white font-bold py-3 hover:bg-cyan-700 transition"
+                                disabled
+                            >
+                                Send Message (Coming Soon)
+                            </button>
+                        </form>
+                    </div>
+                </section>
             </main>
-            <Footer />
+            <MyFooter />
         </div>
     )
 }

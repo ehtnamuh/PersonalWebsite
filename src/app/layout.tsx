@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from "./components/Navbar";
-import Contact from "./components/Contact";
+import Contact from "./components/MyFooter";
 
 function Footer() {
   return (
