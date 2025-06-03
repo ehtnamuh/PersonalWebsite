@@ -325,7 +325,7 @@ export default function Home() {
                 </section>
                 {/* Honors & Awards Section */}
                 {/* TODO: Add links to the projects that won you the award and the competition pages */}
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
+                <section id="awards" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="flex flex-col items-center space-y-12 w-full">
                             <div className="space-y-2 text-center">
@@ -506,7 +506,7 @@ export default function Home() {
                 </section>
                 
                 {/* Volunteering Section */}
-                <section id="awards" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
+                <section id="volunteer" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-col items-center justify-center">
                     <div className="container px-4 md:px-6 flex flex-col items-center">
                         <div className="space-y-6 text-center mb-8">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-cyan-700">
